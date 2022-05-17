@@ -1,7 +1,8 @@
-package com.hussain.fluttercommitlist
+package com.hussain.fluttercommitlist.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.hussain.fluttercommitlist.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

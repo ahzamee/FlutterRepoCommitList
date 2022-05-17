@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FlutterCommitList</string>
+    <string name="repo_name">Flutter Commit List </string>
+    <string name="repo_branch_name">master</string>
+    <string name="commits">Commits</string>
+    <string name="user_profile">UserProfile</string>
 </resources>
