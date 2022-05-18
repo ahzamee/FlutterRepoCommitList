@@ -7,7 +7,7 @@ import retrofit2.http.GET
 
 interface ServiceInterface {
     @GET("commits")
-    fun getCommitList(): Call<List<CommitModel>>
+    fun getCommitList(): Call<CommitModel>
 
     @GET("repos")
     fun getAuthorReposList(): Call<List<AuthorReposListModel>>
