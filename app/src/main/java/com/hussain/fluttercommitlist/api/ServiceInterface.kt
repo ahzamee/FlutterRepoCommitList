@@ -1,14 +1,16 @@
 package com.hussain.fluttercommitlist.api
 
-import com.hussain.fluttercommitlist.model.authorReposModel.AuthorReposListModel
+import com.hussain.fluttercommitlist.model.authorReposModel.AuthorInfoModel
 import com.hussain.fluttercommitlist.model.commitListModel.CommitModel
+import com.hussain.fluttercommitlist.viewModel.AuthorInfoViewModel
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Url
 
 interface ServiceInterface {
     @GET("commits")
     fun getCommitList(): Call<CommitModel>
 
-    @GET("repos")
-    fun getAuthorReposList(): Call<List<AuthorReposListModel>>
+    @GET
+    fun getAuthorReposList(@Url loginUrl:  String): Call<AuthorInfoModel>
 }

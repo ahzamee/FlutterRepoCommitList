@@ -9,7 +9,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivityViewModel: ViewModel() {
+class CommitListViewModel: ViewModel() {
 
     var liveDataList: MutableLiveData<CommitModel> = MutableLiveData()
 

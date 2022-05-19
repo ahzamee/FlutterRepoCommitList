@@ -12,7 +12,7 @@ import com.hussain.fluttercommitlist.R
 import com.hussain.fluttercommitlist.adapter.CommitListAdapter
 import com.hussain.fluttercommitlist.model.commitListModel.CommitModelItem
 import com.hussain.fluttercommitlist.util.Constant.base_url_commit
-import com.hussain.fluttercommitlist.viewModel.MainActivityViewModel
+import com.hussain.fluttercommitlist.viewModel.CommitListViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViewModel(){
 
-        val viewModel:MainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        val viewModel:CommitListViewModel = ViewModelProvider(this).get(CommitListViewModel::class.java)
 
         viewModel.getLiveDataObserver().observe(this, Observer {
             if (it != null){

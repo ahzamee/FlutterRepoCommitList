@@ -11,6 +11,7 @@ import com.google.android.material.imageview.ShapeableImageView
 import com.hussain.fluttercommitlist.R
 import com.hussain.fluttercommitlist.model.commitListModel.CommitModel
 import com.hussain.fluttercommitlist.model.commitListModel.CommitModelItem
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.commit_list_item.view.*
 import java.util.ArrayList
 
@@ -56,6 +57,7 @@ class CommitListAdapter(
         private val authorAvatar: ShapeableImageView = view.author_avatar
 
         fun bind(data: CommitModelItem, listener: OnItemClickListener){
+            Picasso.get().load(data.author.avatarUrl).into(authorAvatar);
             commitMessage.text = data.commit.message
             commitTime.text = data.commit.author.date
             authorName.text = data.commit.author.name
