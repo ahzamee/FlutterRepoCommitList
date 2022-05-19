@@ -1,6 +1,5 @@
 package com.hussain.fluttercommitlist.viewModel
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.hussain.fluttercommitlist.api.ApiInstance.Companion.getApiInstance
@@ -33,7 +32,6 @@ class MainActivityViewModel: ViewModel() {
             }
 
             override fun onFailure(call: Call<CommitModel>, t: Throwable) {
-                Log.d("aaaaaaaaa", t.message.toString())
                 liveDataList.postValue(null)
             }
 

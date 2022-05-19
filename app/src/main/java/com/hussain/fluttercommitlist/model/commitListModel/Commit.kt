@@ -1,6 +1,11 @@
 package com.hussain.fluttercommitlist.model.commitListModel
 
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
 data class Commit(
+    @SerializedName("author")
     val author: AuthorX,
-    val message: String,
-)
+    @SerializedName("message")
+    val message: String
+):Serializable
