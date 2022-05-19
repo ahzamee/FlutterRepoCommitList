@@ -35,9 +35,8 @@ class MainActivity : AppCompatActivity() {
             if (it != null){
                 val commitList: List<CommitModelItem> = filterCommits(it)
                 showData(commitList)
-                Toast.makeText(this, "worked", Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(this, "failed", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Failed to get information", Toast.LENGTH_SHORT).show()
             }
         })
         viewModel.makeApiCall(base_url_commit)
@@ -66,14 +65,13 @@ class MainActivity : AppCompatActivity() {
     private fun initRecyclerView() {
         var listener = object : CommitListAdapter.OnItemClickListener {
             override fun onItemClick(data: CommitModelItem) {
-                Toast.makeText(this@MainActivity, data.commit.message, Toast.LENGTH_SHORT).show()
                 var intent = Intent(this@MainActivity, AuthorInformation::class.java)
                 intent.putExtra("CommitModelItem", data)
                 startActivity(intent)
             }
         }
         commit_list_view.layoutManager = LinearLayoutManager(this)
-        commitListAdapter = CommitListAdapter(this,listener)
+        commitListAdapter = CommitListAdapter(listener)
         commit_list_view.adapter = commitListAdapter
 
         commit_list_view.addItemDecoration(

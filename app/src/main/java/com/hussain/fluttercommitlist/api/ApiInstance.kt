@@ -4,6 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiInstance {
+
     companion object{
 
         fun getApiInstance(base_url: String): Retrofit {

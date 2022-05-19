@@ -1,22 +1,18 @@
 package com.hussain.fluttercommitlist.adapter
 
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 import com.hussain.fluttercommitlist.R
-import com.hussain.fluttercommitlist.model.commitListModel.CommitModel
 import com.hussain.fluttercommitlist.model.commitListModel.CommitModelItem
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.commit_list_item.view.*
 import java.util.ArrayList
 
 class CommitListAdapter(
-    val activity: Activity,
     private val listener: OnItemClickListener): RecyclerView.Adapter<CommitListAdapter.CommitListViewHolder>() {
 
     private var commitModel: List<CommitModelItem> = ArrayList()
